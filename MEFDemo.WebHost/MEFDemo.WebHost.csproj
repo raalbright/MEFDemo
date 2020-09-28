@@ -8,5 +8,10 @@
     <ProjectReference Include="..\MEFDemo.Shared\MEFDemo.Shared.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="System.Composition" Version="1.4.1" />
+    <PackageReference Include="System.Runtime.Loader" Version="4.3.0" />
+  </ItemGroup>
+
 
 </Project>

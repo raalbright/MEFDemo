@@ -5,12 +5,15 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using MEFDemo.Shared;
+using MEFDemo.Shared.Plugin;
+using System.Composition;
 
 namespace MEFDemo.WebApi.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class WeatherForecastController : ControllerBase
+    [Export("ControllerBase", typeof(IPlugin))]
+    public class WeatherForecastController : ControllerBase, IPlugin
     {
         private static readonly string[] Summaries = new[]
         {
